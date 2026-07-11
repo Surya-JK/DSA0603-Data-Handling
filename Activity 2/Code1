@@ -1,0 +1,16 @@
+library(ggplot2)
+
+q1_data <- data.frame(
+  Category = c("Groceries", "Dairy", "Fruits", "Vegetables", "Bakery", 
+               "Beverages", "Snacks", "Personal Care", "Household Items", "Frozen Foods"),
+  Sales = c(120, 95, 80, 75, 68, 90, 110, 55, 70, 60)
+)
+
+ggplot(q1_data, aes(x = reorder(Category, Sales), y = Sales, fill = Category)) +
+  geom_bar(stat = "identity") +
+  coord_flip() + 
+  theme_minimal() +
+  labs(title = "Monthly Sales Revenue by Category (June 2026)",
+       x = "Product Category",
+       y = "Sales (₹ Lakhs)") +
+  theme(legend.position = "none") 
