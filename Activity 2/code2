@@ -1,0 +1,13 @@
+library(ggplot2)
+
+q2_data <- data.frame(
+  Student = paste0("S", 1:12),
+  Salary = c(3.2, 4.5, 5.0, 6.8, 7.2, 8.5, 4.8, 5.5, 6.0, 7.8, 9.2, 10.5)
+)
+
+ggplot(q2_data, aes(x = Salary)) +
+  geom_histogram(binwidth = 1.5, fill = "skyblue", color = "black", alpha = 0.8) +
+  theme_minimal() +
+  labs(title = "Distribution of Salary Packages",
+       x = "Salary Package (LPA)",
+       y = "Frequency")
