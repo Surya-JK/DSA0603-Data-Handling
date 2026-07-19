@@ -1,0 +1,14 @@
+daily_steps <- c(4200, 5000, 5600, 6100, 6800, 7200, 8100, 9200, 10400, 12000)
+plot(ecdf(daily_steps), 
+     main = "ECDF of Daily Steps",
+     xlab = "Number of Steps", 
+     ylab = "Cumulative Probability",
+     col = "#2E75B6", 
+     lwd = 2,
+     verticals = TRUE, 
+     do.points = TRUE, 
+     pch = 19)
+
+abline(v = 8000, col = "red", lty = 2, lwd = 1.5)
+abline(h = 0.60, col = "red", lty = 2, lwd = 1.5)
+points(8000, 0.60, col = "darkred", pch = 18, cex = 1.5)
