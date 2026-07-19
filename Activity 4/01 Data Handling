@@ -1,0 +1,12 @@
+student_marks <- c(62, 51, 58, 60, 65, 68, 72, 75, 88, 72)
+plot(ecdf(student_marks), 
+     main = "ECDF of Data Science Quiz Marks",
+     xlab = "Marks", 
+     ylab = "Cumulative Probability F(x)",
+     col = "#1F4E79", 
+     lwd = 2,
+     verticals = TRUE, 
+     do.points = TRUE, 
+     pch = 19)
+
+grid(nx = NULL, ny = NULL, col = "lightgray", lty = "dotted")
